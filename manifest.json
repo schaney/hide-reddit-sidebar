@@ -9,6 +9,11 @@
     "scripts":["background.js"]
   },
 
+  "content_scripts": [{
+    "matches": ["http://*.reddit.com/", "http://reddit.com/", "https://*.reddit.com/", "https://reddit.com/"],
+    "js": ["jquery.min.js", "auto-hide.js"]
+  }],
+
   "browser_action": {
     "default_icon": "icon.png",
     "default_title": "hide sidebar"

@@ -10,8 +10,9 @@
   },
 
   "content_scripts": [{
-    "matches": ["http://*.reddit.com/", "http://reddit.com/", "https://*.reddit.com/", "https://reddit.com/"],
-    "js": ["jquery.min.js", "auto-hide.js"]
+    "matches": ["*://*.reddit.com/*", "*://reddit.com/*"],
+    "js": ["jquery.min.js", "auto-hide.js"],
+    "run_at": "document_end"
   }],
 
   "browser_action": {
@@ -20,10 +21,7 @@
   },
   "permissions": [
     "activeTab",
-    "https://ajax.googleapis.com/",
-    "http://*.reddit.com/",
-    "http://reddit.com/",
-    "https://*.reddit.com/",
-    "https://reddit.com/"
+    "*://*.reddit.com/",
+    "*://reddit.com/*"
   ]
 }
